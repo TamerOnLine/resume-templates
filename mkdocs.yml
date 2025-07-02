@@ -10,6 +10,5 @@ plugins:
   - awesome-pages
   - git-revision-date
   - macros
-  - pdf-export:
-      verbose: true
+
 
