@@ -6,6 +6,7 @@ theme:
 
 plugins:
   - search
+  - include-markdown
   - awesome-pages
   - git-revision-date
   - macros

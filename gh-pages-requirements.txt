@@ -4,3 +4,4 @@ mkdocs-awesome-pages-plugin
 mkdocs-git-revision-date-plugin
 mkdocs-macros-plugin
 mkdocs-pdf-export-plugin
+mkdocs-include-markdown-plugin
