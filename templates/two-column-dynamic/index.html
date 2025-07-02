@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
   <h1>
     <span id="main-title">RESUME</span>
     <span class="edit-button">
-      <button onclick="editField('main-title')">✏️</button>
+      <button data-edit="main-title">✏️</button>
     </span>
   </h1>
 
@@ -20,39 +21,39 @@
         <td style="text-align: center;">
           <img src="../../assets/default-profile.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
           <div class="edit-button no-print" style="margin-top: 5px;">
-            <button onclick="editProfilePic()">🖼️ Edit Picture</button>
+            <button id="edit-pic">🖼️ Edit Picture</button>
           </div>
         </td>
       </tr>
     </table>
 
     <div style="text-align: right; margin-bottom: 10px;" class="no-print">
-      <button onclick="addLeftSection()">➕ Add Main Section</button>
+      <button id="add-left-section">➕ Add Main Section</button>
     </div>
     <div class="left-column">
       <h2>
         <span id="info-title">Personal Information</span>
         <span class="edit-button">
-          <button onclick="editField('info-title')">✏️</button>
-          <button onclick="togglePrintVisibility(this)">🙈 Hide from print</button>
-          <button onclick="moveUp(this)">⬆️</button>
-          <button onclick="moveDown(this)">⬇️</button>
+          <button data-edit="info-title">✏️</button>
+          <button data-toggle-print>🙈 Hide from print</button>
+          <button data-move-up>⬆️</button>
+          <button data-move-down>⬇️</button>
         </span>
       </h2>
       <div style="text-align: right;" class="no-print">
-        <button onclick="addLeftItem(this)">➕ Add Info</button>
+        <button class="add-left-item">➕ Add Info</button>
       </div>
-      <ul>
+      <ul id="left-info-list">
         <li>
           <strong id="label-name">Name:</strong>
           <span id="name">Tamer Hamad Faour</span>
           <span class="edit-button">
-            <button onclick="editField('label-name')">✏️</button>
-            <button onclick="editField('name')">🖊️</button>
-            <button onclick="deleteElement(this)">🗑️</button>
-            <button onclick="togglePrintVisibility(this)">🙈 Hide from print</button>
-            <button onclick="moveUp(this)">⬆️</button>
-            <button onclick="moveDown(this)">⬇️</button>
+            <button data-edit="label-name">✏️</button>
+            <button data-edit="name">🖊️</button>
+            <button data-delete>🗑️</button>
+            <button data-toggle-print>🙈 Hide from print</button>
+            <button data-move-up>⬆️</button>
+            <button data-move-down>⬇️</button>
           </span>
         </li>
       </ul>
@@ -61,20 +62,30 @@
 
   <div>
     <div style="text-align: right; margin-bottom: 10px;" class="no-print">
-      <button onclick="addProjectsSection()">➕ Add Main Section</button>
+      <button id="add-project-section">➕ Add Main Section</button>
     </div>
     <div id="projects-section-1">
       <h2>
         <span id="projects-title-1">Projects Section</span>
         <span class="edit-button">
-          <button onclick="editField('projects-title-1')">✏️</button>
-          <button onclick="togglePrintVisibility(this)">🙈 Hide from print</button>
-          <button onclick="moveUp(this)">⬆️</button>
-          <button onclick="moveDown(this)">⬇️</button>
+          <button data-edit="projects-title-1">✏️</button>
+          <button data-toggle-print>🙈 Hide from print</button>
+          <button data-move-up>⬆️</button>
+          <button data-move-down>⬇️</button>
         </span>
       </h2>
       <div style="text-align: right; margin-bottom: 10px;" class="no-print">
-        <button onclick="addProjectToSection('projects-section-1')">➕ New Project</button>
+        <button class="add-project" data-section="projects-section-1">➕ New Project</button>
+      </div>
+      <div class="project-box">
+        <h3 contenteditable>Project Title</h3>
+        <p contenteditable>Short description of the project...</p>
+        <div class="edit-button">
+          <button data-delete>🗑️</button>
+          <button data-toggle-print>🙈 Hide from print</button>
+          <button data-move-up>⬆️</button>
+          <button data-move-down>⬇️</button>
+        </div>
       </div>
     </div>
   </div>
@@ -84,6 +95,10 @@
   <button id="print-btn" onclick="printPage()">🖨️ Print Page</button>
 </div>
 
-<script src="script.js"></script>
+<div style="text-align: center; margin-top: 10px;">
+  <button id="save-btn">💾 Save Changes</button>
+  <button id="clear-btn">🧹 Reset</button>
+</div>
+<script src="save.js"></script>
 </body>
 </html>

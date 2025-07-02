@@ -1,118 +1,101 @@
-/* إعدادات صفحة الطباعة */
+/* style.css */
 @page {
-  size: A4 portrait;         /* حجم الصفحة A4 بوضع عمودي */
-  margin: 5px;               /* هامش خارجي صغير للطباعة */
+  size: A4 portrait;
+  margin: 5px;
 }
 
-/* إعدادات عامة لعنصر <body> */
 body {
-  font-family: Arial, sans-serif;  /* نوع الخط المستخدم */
-  background-color: #fff;          /* خلفية بيضاء */
-  color: #000;                     /* لون النص أسود */
-  margin: 0;                       /* إزالة الهامش الافتراضي */
-  padding: 0;                      /* إزالة الحشو الافتراضي */
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
-/* تنسيق الحاوية الرئيسية باستخدام شبكة (Grid) */
 .container {
-  display: grid;                   /* استخدام تخطيط الشبكة */
-  grid-template-columns: 1fr 2fr;  /* عمودين: الأيسر 1 جزء، الأيمن 2 أجزاء */
-  gap: 10px;                       /* فراغ بين الأعمدة */
-  padding: 10px;                   /* حشوة داخلية للحاوية */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  padding: 10px;
 }
 
-/* العنوان الرئيسي H1 */
 h1 {
-  grid-column: span 2;            /* جعل العنوان يمتد على العمودين */
-  text-align: center;             /* توسيط العنوان */
-  color: #2c3e50;                 /* لون النص أزرق غامق */
-  margin-bottom: 10px;           /* مسافة أسفل العنوان */
+  grid-column: span 2;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
 
-/* العناوين الفرعية H2 */
 h2 {
-  color: #34495e;                /* لون أزرق مائل للرمادي */
-  border-bottom: 2px solid #ccc; /* خط سفلي للعناوين */
-  padding-bottom: 5px;           /* حشوة أسفل النص قبل الخط */
-  margin-top: 10px;              /* مسافة علوية */
+  color: #34495e;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 10px;
 }
 
-/* إزالة نقاط القائمة <ul> */
 ul {
-  list-style: none;             /* إزالة الرمز النقطي من القائمة */
-  padding-left: 0;              /* إزالة الحشو الأيسر */
+  list-style: none;
+  padding-left: 0;
 }
 
-/* تنسيق عناصر القائمة <li> */
 ul li {
-  margin-bottom: 10px;          /* فراغ بين العناصر */
+  margin-bottom: 10px;
 }
 
-/* الروابط الافتراضية <a> */
 a {
-  color: #1a0dab;               /* لون أزرق غامق للروابط */
-  text-decoration: none;        /* إزالة الخط السفلي */
+  color: #1a0dab;
+  text-decoration: none;
 }
 
-/* عند تمرير الماوس فوق الرابط */
 a:hover {
-  text-decoration: underline;   /* إظهار خط تحت الرابط */
+  text-decoration: underline;
 }
 
-/* زر الطباعة الرئيسي */
 button#print-btn {
-  padding: 10px 20px;           /* حشوة داخل الزر */
-  font-size: 16px;              /* حجم الخط داخل الزر */
-  cursor: pointer;              /* تحويل شكل المؤشر إلى يد */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-/* العمود الأيسر – الخلفية الرمادية */
 .left-column {
-  background-color: #f2f2f2;    /* خلفية رمادية فاتحة */
-  padding: 20px;                /* حشوة داخلية كبيرة */
-  border-radius: 8px;           /* زوايا دائرية */
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-/* صورة الملف الشخصي */
 .profile-pic {
-  width: 80px;                  /* عرض ثابت للصورة */
-  height: auto;                 /* ارتفاع تلقائي حسب النسبة */
-  border-radius: 50%;          /* جعل الصورة دائرية */
-  margin-bottom: 10px;         /* مسافة أسفل الصورة */
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-/* صندوق المشروع */
 .project-box {
-  padding: 12px 15px;           /* حشوة داخلية */
-  margin-bottom: 15px;          /* مسافة بين المشاريع */
-  border: 1px solid #ddd;       /* حدود رمادية خفيفة */
-  border-radius: 6px;           /* زوايا مستديرة خفيفة */
-  background-color: #fafafa;    /* خلفية رمادية فاتحة جداً */
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fafafa;
 }
 
-/* مجموعة أزرار التعديل */
 .edit-button {
-  display: inline-block;        /* عرض الزر بجانب العنصر */
-  margin-left: 6px;             /* مسافة يسار الزر */
+  display: inline-block;
+  margin-left: 6px;
 }
 
-/* أزرار التعديل داخل العناصر */
 .edit-button button {
-  font-size: 12px;              /* حجم خط صغير للأزرار */
-  padding: 2px 6px;             /* حشوة صغيرة داخل الزر */
-  cursor: pointer;              /* مؤشر يد عند المرور */
+  font-size: 12px;
+  padding: 2px 6px;
+  cursor: pointer;
 }
 
-/* Print-specific styles */
 @media print {
-  /* Hide buttons and non-print elements */
   .no-print,
   #print-btn,
   .edit-button {
     display: none !important;
   }
 
-  /* Preserve background colors and styles in print */
   .left-column,
   .profile-pic,
   .project-box {
@@ -120,7 +103,6 @@ button#print-btn {
     print-color-adjust: exact;
   }
 
-  /* Prevent content from breaking between pages */
   .project-box,
   .left-column > div,
   .left-column,
