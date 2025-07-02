@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume – Tamer Hamad Faour</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>
+    <span id="main-title">RESUME</span>
+    <span class="edit-button">
+      <button onclick="editField('main-title')">✏️</button>
+    </span>
+  </h1>
+
+  <div>
+    <table style="width: 100%; margin-bottom: 10px;">
+      <tr>
+        <td style="text-align: center;">
+          <img src="../../assets/default-profile.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+          <div class="edit-button no-print" style="margin-top: 5px;">
+            <button onclick="editProfilePic()">🖼️ Edit Picture</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div style="text-align: right; margin-bottom: 10px;" class="no-print">
+      <button onclick="addLeftSection()">➕ Add Main Section</button>
+    </div>
+    <div class="left-column">
+      <h2>
+        <span id="info-title">Personal Information</span>
+        <span class="edit-button">
+          <button onclick="editField('info-title')">✏️</button>
+          <button onclick="togglePrintVisibility(this)">🙈 Hide from print</button>
+          <button onclick="moveUp(this)">⬆️</button>
+          <button onclick="moveDown(this)">⬇️</button>
+        </span>
+      </h2>
+      <div style="text-align: right;" class="no-print">
+        <button onclick="addLeftItem(this)">➕ Add Info</button>
+      </div>
+      <ul>
+        <li>
+          <strong id="label-name">Name:</strong>
+          <span id="name">Tamer Hamad Faour</span>
+          <span class="edit-button">
+            <button onclick="editField('label-name')">✏️</button>
+            <button onclick="editField('name')">🖊️</button>
+            <button onclick="deleteElement(this)">🗑️</button>
+            <button onclick="togglePrintVisibility(this)">🙈 Hide from print</button>
+            <button onclick="moveUp(this)">⬆️</button>
+            <button onclick="moveDown(this)">⬇️</button>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div style="text-align: right; margin-bottom: 10px;" class="no-print">
+      <button onclick="addProjectsSection()">➕ Add Main Section</button>
+    </div>
+    <div id="projects-section-1">
+      <h2>
+        <span id="projects-title-1">Projects Section</span>
+        <span class="edit-button">
+          <button onclick="editField('projects-title-1')">✏️</button>
+          <button onclick="togglePrintVisibility(this)">🙈 Hide from print</button>
+          <button onclick="moveUp(this)">⬆️</button>
+          <button onclick="moveDown(this)">⬇️</button>
+        </span>
+      </h2>
+      <div style="text-align: right; margin-bottom: 10px;" class="no-print">
+        <button onclick="addProjectToSection('projects-section-1')">➕ New Project</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin: 20px;">
+  <button id="print-btn" onclick="printPage()">🖨️ Print Page</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
