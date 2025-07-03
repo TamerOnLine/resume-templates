@@ -7,7 +7,6 @@ theme:
 
 nav:
   - Home: index.md
-  - About: about.md
   - Templates:
       - Two Column Dynamic: templates/two-column-dynamic.md
 
