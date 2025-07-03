@@ -6,9 +6,7 @@ theme:
 
 
 nav:
-  - Home: index.md
-  - Templates:
-      - Two Column Dynamic: templates/two-column-dynamic.md
+  - Two Column Dynamic: two-column-dynamic.md
 
 plugins:
   - search
