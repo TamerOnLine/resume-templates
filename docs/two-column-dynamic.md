@@ -74,7 +74,12 @@ This template provides a dynamic two-column resume layout with built-in editing,
 
 You can interact with the resume template below. Changes are saved to your browser.
 
-<iframe src="../live/index.html" width="100%" height="800" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+<iframe src="/resume-templates/templates/two-column-dynamic/index.html"
+        width="100%"
+        height="800"
+        style="border: 1px solid #ccc; border-radius: 8px;">
+</iframe>
+
 
 ---
 
