@@ -1,4 +1,4 @@
-# 📄 Template: Two Column Dynamic
+# 📄 Two Column Dynamic
 
 This template provides a dynamic two-column resume layout with built-in editing, saving, and printing capabilities – all in the browser.
 

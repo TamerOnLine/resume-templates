@@ -1,17 +1,13 @@
-site_name: TamerOnline Docs
+site_name: Templates Docs
 site_url: https://tameronline.github.io/resume-templates/
 
 theme:
   name: material
 
-
-nav:
-  - Two Column Dynamic: two-column-dynamic.md
-
 plugins:
   - search
-  - git-revision-date
   - macros
+  - awesome-pages
 
 
 
