@@ -70,11 +70,11 @@ This template provides a dynamic two-column resume layout with built-in editing,
 
 ---
 
-## 🔗 Live Demo
+# 🧪 Live Resume Template
 
-You can try the resume template live in your browser:
+You can interact with the resume template below. Changes are saved to your browser.
 
-👉 [Open Template in Browser](https://tameronline.github.io/resume-templates/templates/two-column-dynamic/index.html)
+<iframe src="../live/index.html" width="100%" height="800" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 ---
 
