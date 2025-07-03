@@ -1,14 +1,20 @@
 site_name: TamerOnline Docs
-site_url: https://tameronline.github.io/pro-gh-pages/
+site_url: https://tameronline.github.io/resume-templates/
 
 theme:
   name: material
 
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Templates:
+      - Two Column Dynamic: templates/two-column-dynamic.md
+
 plugins:
   - search
-  - awesome-pages
-  - include-markdown
   - git-revision-date
   - macros
+
 
 
