@@ -4,101 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <title>Resume – Tamer Hamad Faour</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- ربط ملف CSS الرئيسي لتنسيق الصفحة -->
+  <link rel="stylesheet" href="styles/main.css">
+
 </head>
 <body>
+
+<!-- الحاوية الرئيسية التي تحتوي على جميع أقسام السيرة الذاتية -->
 <div class="container">
+
+  <!-- العنوان الرئيسي للسيرة الذاتية -->
   <h1>
+    <!-- عنوان يمكن تعديله من قبل المستخدم -->
     <span id="main-title">RESUME</span>
+    <!-- زر تعديل العنوان -->
     <span class="edit-button">
       <button data-edit="main-title">✏️</button>
     </span>
   </h1>
 
+  <!-- قسم الصورة الشخصية -->
   <div>
     <table style="width: 100%; margin-bottom: 10px;">
       <tr>
         <td style="text-align: center;">
+          <!-- صورة الملف الشخصي -->
           <img src="../../assets/default-profile.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+          <!-- زر تعديل الصورة -->
           <div class="edit-button no-print" style="margin-top: 5px;">
-            <button id="edit-pic">🖼️ Edit Picture</button>
+            
           </div>
         </td>
       </tr>
     </table>
 
+    <!-- زر لإضافة قسم جديد في العمود الأيسر -->
     <div style="text-align: right; margin-bottom: 10px;" class="no-print">
       <button id="add-left-section">➕ Add Main Section</button>
     </div>
-    <div class="left-column">
-      <h2>
-        <span id="info-title">Personal Information</span>
-        <span class="edit-button">
-          <button data-edit="info-title">✏️</button>
-          <button data-toggle-print>🙈 Hide from print</button>
-          <button data-move-up>⬆️</button>
-          <button data-move-down>⬇️</button>
-        </span>
-      </h2>
-      <div style="text-align: right;" class="no-print">
-        <button class="add-left-item">➕ Add Info</button>
-      </div>
-      <ul id="left-info-list">
-        <li>
-          <strong id="label-name">Name:</strong>
-          <span id="name">Tamer Hamad Faour</span>
-          <span class="edit-button">
-            <button data-edit="label-name">✏️</button>
-            <button data-edit="name">🖊️</button>
-            <button data-delete>🗑️</button>
-            <button data-toggle-print>🙈 Hide from print</button>
-            <button data-move-up>⬆️</button>
-            <button data-move-down>⬇️</button>
-          </span>
-        </li>
-      </ul>
-    </div>
+
+    <!-- العمود الأيسر: مخصص للمعلومات العامة مثل البيانات الشخصية والمهارات -->
+    <div class="left-column"></div>
   </div>
 
+  <!-- قسم المشاريع (العمود الأيمن غالبًا) -->
   <div>
+    <!-- زر لإضافة قسم مشاريع جديد -->
     <div style="text-align: right; margin-bottom: 10px;" class="no-print">
       <button id="add-project-section">➕ Add Main Section</button>
     </div>
+
+    <!-- الحاوية الأساسية لمشاريع المستخدم -->
     <div id="projects-section-1">
-      <h2>
-        <span id="projects-title-1">Projects Section</span>
-        <span class="edit-button">
-          <button data-edit="projects-title-1">✏️</button>
-          <button data-toggle-print>🙈 Hide from print</button>
-          <button data-move-up>⬆️</button>
-          <button data-move-down>⬇️</button>
-        </span>
-      </h2>
-      <div style="text-align: right; margin-bottom: 10px;" class="no-print">
-        <button class="add-project" data-section="projects-section-1">➕ New Project</button>
-      </div>
-      <div class="project-box">
-        <h3 contenteditable>Project Title</h3>
-        <p contenteditable>Short description of the project...</p>
-        <div class="edit-button">
-          <button data-delete>🗑️</button>
-          <button data-toggle-print>🙈 Hide from print</button>
-          <button data-move-up>⬆️</button>
-          <button data-move-down>⬇️</button>
-        </div>
-      </div>
+      <!-- يمكن إضافة المشاريع ديناميكياً هنا -->
+
     </div>
   </div>
+
 </div>
 
-
-
+<!-- أزرار التحكم في أسفل الصفحة: طباعة، حفظ، إعادة تعيين -->
 <div style="text-align: center; margin: 20px;" class="no-print">
   <button id="print-btn" onclick="printPage()">🖨️ Print Page</button>
   <button id="save-btn" onclick="saveToLocalStorage()">💾 Save Changes</button>
   <button id="clear-btn" onclick="clearStorage()">🧹 Reset</button>
 </div>
 
+<!-- استدعاء ملف JavaScript لحفظ البيانات وتعديل النصوص -->
 <script src="save.js"></script>
+
 </body>
 </html>

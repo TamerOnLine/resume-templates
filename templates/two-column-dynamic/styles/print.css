@@ -1,0 +1,25 @@
+/* 🖨️ تنسيقات الطباعة */
+
+@media print {
+  .no-print,
+  #print-btn,
+  .edit-button {
+    display: none !important;
+  }
+
+  .left-column,
+  .profile-pic,
+  .project-box {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .project-box,
+  .left-column > div,
+  .left-column,
+  h2,
+  h3 {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

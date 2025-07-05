@@ -1,0 +1,43 @@
+/* زر الطباعة */
+button#print-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* تصميم عام للأزرار */
+button {
+  padding: 8px 16px;
+  margin: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6e6e6;
+}
+
+/* زر الحفظ */
+button#save-btn {
+  color: purple;
+}
+
+/* زر إعادة التعيين */
+button#clear-btn {
+  color: darkorange;
+}
+
+.edit-button {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.edit-button button {
+  font-size: 12px;
+  padding: 2px 6px;
+  cursor: pointer;
+}

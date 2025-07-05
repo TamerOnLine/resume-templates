@@ -1,0 +1,12 @@
+/* ✅ main.css: ملف مركزي لتجميع كل التنسيقات */
+
+@import url("base.css");       /* تنسيقات أساسية */
+@import url("layout.css");     /* تنسيق الحاويات والعواميد */
+@import url("buttons.css");    /* تصميم الأزرار */
+@import url("components.css"); /* المكونات الصغيرة مثل edit-button */
+@import url("cont.css");       /* أي ملف إضافي */
+@import url("Picture.css");    /* تنسيقات الصورة الشخصية */
+@import url("data.css");       /* التنسيقات الخاصة بالمحتوى */
+@import url("save.css");       /* التنسيقات الخاصة بالحفظ */
+@import url("print.css");      /* تنسيقات الطباعة */
+
