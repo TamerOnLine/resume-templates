@@ -2,10 +2,9 @@ function applyPrintSettings() {
   const fontFamily = document.getElementById("font-family").value;
   const fontSize = document.getElementById("font-size").value + "pt";
   const lineHeight = document.getElementById("line-height").value;
-  const hideLeft = document.getElementById("hide-left-column").checked;
-  const pageMargin = document.getElementById("margin").value + "cm";
+  const pageMargin = (document.getElementById("margin")?.value || "1.5") + "cm";
+  const gapBetween = (document.getElementById("gap-between")?.value || 0) + "px";
 
-  // إنشاء عنصر style أو استرجاعه
   let style = document.getElementById("dynamic-print-style");
   if (!style) {
     style = document.createElement("style");
@@ -13,33 +12,50 @@ function applyPrintSettings() {
     document.head.appendChild(style);
   }
 
-  // توليد CSS مخصص للطباعة
   style.innerHTML = `
+    /* 💻 معاينة الشاشة */
+    body {
+      font-family: "${fontFamily}", serif;
+      font-size: ${fontSize};
+      line-height: ${lineHeight};
+      color: #000;
+    }
+
+    .project-box > div,
+    .left-column > div {
+      margin-bottom: ${gapBetween} !important;
+    }
+
+    /* 🖨️ الطباعة */
     @media print {
-      body, .left-column, .right-column, .project-box {
-        font-family: "${fontFamily}", sans-serif !important;
-        font-size: ${fontSize} !important;
-        line-height: ${lineHeight} !important;
-        color: #000 !important;
+      body {
+        font-family: "${fontFamily}", serif;
+        font-size: ${fontSize};
+        line-height: ${lineHeight};
+        color: #000;
       }
 
-      ${hideLeft ? `
-        .left-column { display: none !important; }
-        .right-column { width: 100% !important; }
-      ` : ""}
+      .project-box > div,
+      .left-column > div {
+        margin-bottom: ${gapBetween} !important;
+      }
 
       .edit-button, .no-print, #print-btn, #save-btn, #clear-btn {
         display: none !important;
       }
 
-      @page {
-        margin: ${pageMargin};
-      }
-
-      .profile-pic,
-      .project-box {
+      .left-column, .project-box, .profile-pic {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+      }
+
+      h1, h2, h3, .project-box, .left-column > div {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      @page {
+        margin: ${pageMargin};
       }
     }
   `;

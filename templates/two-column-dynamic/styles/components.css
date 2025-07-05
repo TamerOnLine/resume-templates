@@ -8,14 +8,12 @@
   border-bottom: 1px dashed #ccc;
   flex-wrap: nowrap;
 }
-
 .project-box strong {
   min-width: 120px;
   flex-shrink: 0;
   font-weight: bold;
   color: #2c3e50;
 }
-
 .project-box span[contenteditable],
 .project-box a {
   flex-grow: 1;
@@ -23,7 +21,6 @@
   word-break: break-word;
   padding: 2px 4px;
 }
-
 .project-box .edit-button {
   display: flex;
   gap: 4px;
@@ -31,12 +28,10 @@
   flex-shrink: 0;
   white-space: nowrap;
 }
-
 .project-box .edit-button button {
   font-size: 12px;
   padding: 3px 6px;
 }
-
 .left-column ul li {
   display: flex;
   align-items: center;
@@ -49,20 +44,17 @@
   border-bottom: 1px dashed #ccc;
   flex-wrap: nowrap;
 }
-
 .left-column strong {
   min-width: 100px;
   flex-shrink: 0;
   font-weight: bold;
 }
-
 .left-column span[contenteditable] {
   flex-grow: 1;
   min-width: 0;
   word-break: break-word;
   padding: 2px 4px;
 }
-
 .left-column .edit-button {
   display: flex;
   gap: 4px;
@@ -70,13 +62,7 @@
   flex-shrink: 0;
   white-space: nowrap;
 }
-
 .left-column .edit-button button {
   font-size: 12px;
   padding: 3px 6px;
 }
-
-
-
-
-

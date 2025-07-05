@@ -6,51 +6,56 @@
   <title>Resume – Tamer Hamad Faour</title>
   <!-- ربط ملف CSS الرئيسي لتنسيق الصفحة -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/print.css" media="print">
+  <link rel="stylesheet" href="styles/print-toolbar.css">
+
 
 </head>
 <body>
 
-  <!-- ✅ لوحة التحكم في إعدادات الطباعة -->
-<!-- 🔧 شريط إعدادات الطباعة -->
-<div class="no-print" style="
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 1000;
-  padding: 8px 10px;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  font-size: 14px;
-">
-
-  <label>نوع الخط:
+<!-- 🎛️ شريط إعدادات الطباعة -->
+<div id="print-toolbar" class="print-toolbar no-print">
+  <div class="toolbar-item">
+    <label for="font-family">خط الطباعة:</label>
     <select id="font-family">
+      <option value="Georgia" selected>Georgia</option>
       <option value="Times New Roman">Times New Roman</option>
-      <option value="Georgia">Georgia</option>
       <option value="Arial">Arial</option>
       <option value="Tahoma">Tahoma</option>
     </select>
-  </label>
+  </div>
 
-  <label>الحجم:
-    <input type="number" id="font-size" value="14" style="width: 50px;">pt
-  </label>
+  <div class="toolbar-item">
+    <label for="font-size">حجم الخط:</label>
+    <input id="font-size" type="number" value="14" min="8" max="32"> pt
+  </div>
 
-  <label>ارتفاع السطر:
-    <input type="number" id="line-height" value="1" step="0.1" style="width: 50px;">
-  </label>
+  <div class="toolbar-item">
+    <label for="line-height">ارتفاع السطر:</label>
+    <input id="line-height" type="number" value="1.5" min="1" max="3" step="0.1">
+  </div>
 
-  <label>
-    <input type="checkbox" id="hide-left-column" checked> إخفاء العمود الأيسر
-  </label>
+  <div class="toolbar-item">
+    <label for="margin">هامش الصفحة:</label>
+    <input id="margin" type="number" value="1.5" min="0.5" max="5" step="0.1"> cm
+  </div>
 
-  <button onclick="applyPrintSettings()" style="padding: 5px 10px;">✅ تطبيق</button>
-  <button onclick="window.print()" style="padding: 5px 10px;">🖨️ طباعة الآن</button>
 
+
+  <div class="toolbar-item">
+    <label for="gap-between">المسافة بين العناصر:</label>
+    <input id="gap-between" type="number" value="8" min="0" max="50" step="1"> px
+  </div>
+
+
+  <div class="toolbar-actions">
+    <button onclick="applyPrintSettings()">✅ تطبيق</button>
+    <button onclick="window.print()">🖨️ طباعة</button>
+  </div>
 </div>
+
+
+
 
 
 
