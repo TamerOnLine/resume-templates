@@ -10,6 +10,50 @@
 </head>
 <body>
 
+  <!-- ✅ لوحة التحكم في إعدادات الطباعة -->
+<!-- 🔧 شريط إعدادات الطباعة -->
+<div class="no-print" style="
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+  padding: 8px 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 14px;
+">
+
+  <label>نوع الخط:
+    <select id="font-family">
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Arial">Arial</option>
+      <option value="Tahoma">Tahoma</option>
+    </select>
+  </label>
+
+  <label>الحجم:
+    <input type="number" id="font-size" value="14" style="width: 50px;">pt
+  </label>
+
+  <label>ارتفاع السطر:
+    <input type="number" id="line-height" value="1" step="0.1" style="width: 50px;">
+  </label>
+
+  <label>
+    <input type="checkbox" id="hide-left-column" checked> إخفاء العمود الأيسر
+  </label>
+
+  <button onclick="applyPrintSettings()" style="padding: 5px 10px;">✅ تطبيق</button>
+  <button onclick="window.print()" style="padding: 5px 10px;">🖨️ طباعة الآن</button>
+
+</div>
+
+
+
 <!-- الحاوية الرئيسية التي تحتوي على جميع أقسام السيرة الذاتية -->
 <div class="container">
 
@@ -72,6 +116,7 @@
 
 <!-- استدعاء ملف JavaScript لحفظ البيانات وتعديل النصوص -->
 <script src="save.js"></script>
+<script src="print.js"></script>
 
 </body>
 </html>
